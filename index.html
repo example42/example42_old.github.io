@@ -29,15 +29,19 @@ title: Example42 Puppet Works
     {% include header.html %}  
       <!--index-->
       <div class="index">
-        <h1>
-          <img src="img/logo-index42.png" alt="Example42 Puppet Works" align="left" vspace="200px">
-        </h1>
-        <h1>Example42 Puppet Works</h1
-        <h2>An Open Source Set of Reusable Puppet Modules<h2/>
-        <h2>Free documentation, inspiration, tutoriala<h2/>
+        <div class="col-md-6">
+          <img src="img/logo-index42.png" alt="Example42 Puppet Works">
+        </div>
+        <div class="col-md-6">
+        <h1>Example42 Puppet Works</h1>
+        <h2>An Open Source Set of Reusable Puppet Modules</h2>
+        <h2>Free documentation, inspiration, tutorial</h2>
         <h2>Puppet Services, for fun and profit</h2>
         <p class="download-link"><a class="btn btn-primary" href="https://forge.puppetlabs.com/example42">Download for the Forge</a></p>
         <p class="download-link"><a class="btn btn-primary" href="https://github.com/example42">Download from GitHub</a></p>
+        <p class="version-text">Apache Licence 2.0</p>
+        </div>
+      </div>
        <ul class="social">
         <li>
           <iframe src="http://ghbtns.com/github-btn.html?user=example42&amp;repo=puppet-modules&amp;type=watch&amp;count=true&size=large" title="Star on GitHub" frameborder="0" scrolling="0" width="150" height="25"></iframe>
@@ -50,12 +54,11 @@ title: Example42 Puppet Works
   allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe>         
         </li>
       </ul>
-        <p class="version-text">Apache Licence 2.0</p>
-      </div>
+
       <!--desc-->
       <div id="learn-more" class="desc container">
 
-      <div class="blog-index">  
+      <div>  
        {% assign post = site.posts.first %}
        {% assign content = post.content %}
        {% include post_detail.html %}
@@ -83,28 +86,29 @@ title: Example42 Puppet Works
           <div class="row">
             <div class="col-md-6">
               <h2>Keep in contact</h2>
-              <ul>
-
                 <!-- Begin MailChimp Signup Form -->
+                <h4>Newsletter</h4>
                 <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
                 <div id="mc_embed_signup">
-                <h4>Newsletter</h4>
                 <form action="http://example42.us6.list-manage.com/subscribe/post?u=17ca4725b2de64ee6f30c4e1d&amp;id=c638b498a6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <input style="margin-bottom: 10px;" type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required>
                     <span class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary"></span>
                 </form>
                 </div>
                 <!--End mc_embed_signup-->
+
                 <h4>Forum</h4>
                 <p>Google group: <a href="https://groups.google.com/forum/#!forum/example42-puppet-modules" target="_blank" rel="external nofollow">Example42 Puppet Modules</a></p>
+
+                <h4>Social</h4>
                 <ul>
-                <li>
-                  <a title="Twitter" href="https://twitter.com/alvagante" target="_blank" rel="external nofollow"><i class="icon" data-icon="&#xe121"></i></a>
-                  <a title="Facebook" href="https://www.facebook.com/Example42PuppetModules" target="_blank" rel="external nofollow"><i class="icon" data-icon="&#xe10b"></i></a>
-                  <a title="Google+" href="http://google.com/+Example42" target="_blank" rel="external nofollow"><i class="icon" data-icon="&#xe110"></i></a>
-                  <a title="Github" href="https://github.com/example42" target="_blank" rel="external nofollow"><i class="icon" data-icon="&#xe10e"></i></a>
-                </li>
-              </ul>
+                  <li>
+                    <a title="Twitter" href="https://twitter.com/alvagante" target="_blank" rel="external nofollow"><i class="icon" data-icon="&#xe121"></i></a>
+                    <a title="Facebook" href="https://www.facebook.com/Example42PuppetModules" target="_blank" rel="external nofollow"><i class="icon" data-icon="&#xe10b"></i></a>
+                    <a title="Google+" href="http://google.com/+Example42" target="_blank" rel="external nofollow"><i class="icon" data-icon="&#xe110"></i></a>
+                    <a title="Github" href="https://github.com/example42" target="_blank" rel="external nofollow"><i class="icon" data-icon="&#xe10e"></i></a>
+                  </li>
+                </ul>
             </div>
             <div class="col-md-6">
                 <!-- Twitter timeline -->
