@@ -45,109 +45,59 @@
       <!--index-->
       <div class="index">
         <h1>
-          <img src="img/logo-index42.png" alt="Example42 Puppet services">
+          <img src="img/logo-index42.png" alt="Example42 Puppet services" align="left">
         </h1>
         <h2>Example42 is about Puppet<br/>You can find here:<br/>An Open Source Set of Reusable Puppet Modules<br/>Free documentation, inspiration, explanations.<br/>Puppet Services for fun and profit</h2>
-        <h3>Compatible Browsers: IE8, IE9, IE10, IE11, Firefox, Safari, Opera, Chrome.</h3>
         <p class="download-link">
           <a class="btn btn-primary" href="https://github.com/example42">Download from GitHub</a>
         </p>
         <p class="version-text">Apache Licence 2.0</p>
-        <p class="learn-more Bootflat">
-          <a href="#learn-more">Learn more <i class="icon" data-icon="&#xe035"></i></a>
-        </p>
       </div>
       <!--social-->
       <ul class="social">
         <li class="github-watch">
-          <iframe src="http://ghbtns.com/github-btn.html?user=bootflat&amp;repo=bootflat.github.io&amp;type=watch&amp;count=true" title="Star on GitHub" frameborder="0" scrolling="0" width="150" height="25"></iframe>
+          <iframe src="http://ghbtns.com/github-btn.html?user=example42&amp;repo=puppet-modules&amp;type=watch&amp;count=true&size=large" title="Star on GitHub" frameborder="0" scrolling="0" width="150" height="25"></iframe>
         </li>
         <li class="github-fork">
-          <iframe src="http://ghbtns.com/github-btn.html?user=bootflat&amp;repo=bootflat.github.io&amp;type=fork&amp;count=true" title="Fork on GitHub" frameborder="0" scrolling="0" width="150" height="25"></iframe>
+          <iframe src="http://ghbtns.com/github-btn.html?user=example42&amp;repo=puppet-modules&amp;type=fork&amp;count=true&size=large" title="Fork on GitHub" frameborder="0" scrolling="0" width="150" height="25"></iframe>
         </li>
         <li class="twitter-follow">
-            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/follow_button.1375828408.html#_=1376720237528&amp;id=twitter-widget-1&amp;lang=en&amp;screen_name=flathemes&amp;show_count=true&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 254px; height: 20px;"></iframe>
-        </li>
-        <li class="twitter-share">
-            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1375828408.html#_=1376720237525&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fgetbootstrap.com%2F&amp;related=mdo%3ACreator%20of%20Twitter%20Bootstrap&amp;size=m&amp;text=Bootflat&amp;url=http%3A%2F%2Fflathemes.com%2F&amp;via=flathemes" class="twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 116px; height: 20px;"></iframe>
+            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/follow_button.1375828408.html#_=1376720237528&amp;id=twitter-widget-1&amp;lang=en&amp;screen_name=example42&amp;show_count=true&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 254px; height: 20px;"></iframe>
         </li>
       </ul>
       <!--desc-->
       <div id="learn-more" class="desc container">
-        <div class="desc__introduces">
-          <h3>Designed for everyone, everywhere.</h3>
-          <p>Bootflat is built on the foundations of Bootstrap, visioned in a stunning flat design. Bootstrap itself is a trusted, reliable and proven tool for developers. Built with <a href="http://sass-lang.com/" target="_blank" rel="external nofollow">Sass 3.3.5</a>.</p>
-        </div>
-        <div class="desc__features">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="features__photo"><img src="img/feature-bootstrap.png" /></div>
-              <h4>Bootstrap 3.1.1</h4>
-              <p>Bootflat is built on Bootstrap 3.1.1: the sleek, intuitive, and powerful mobile-first front-end framework for faster and easier web development.</p>
-            </div>
-             <div class="col-md-6">
-              <div class="features__photo"><img src="img/feature-css.png" /></div>
-              <h4>HTML5 &amp; CSS3</h4>
-              <p>Bootflat's components are built with HTML5 and CSS3. The pages use `header`, `nav` and `section` to build the layout. Bootflat also comes with several splendid color schemes built-in, and allows for easy customization.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="features__photo"><img src="img/feature-lightweight.png" /></div>
-              <h4>Lightweight</h4>
-              <p>Bootflat uses lightweight high-function plugins for maximum performance, keeping CSS and JS file sizes down.</p>
-            </div>
-            <div class="col-md-6">
-              <div class="features__photo"><img src="img/feature-mobile.png" /></div>
-              <h4>Mobile first</h4>
-              <p>Bootflat is fully responsive, built for mobile-first in mind. It provides off screen navigation, and almost all the widgets are compatible with all screen sizes.</p>
-            </div>
-          </div>
-        </div>
-        <div class="desc__introduces">
-          <h3>Bootflat UI Kit</h3>
-          <p>Bootflat UI Kit is PSD User Interface Pack including a set of beautiful and pure components, which you can use to create startup projects, websites or iOS/Android Apps. <a href="free-psd.html">Go to download it</a>.</p>
-          <div class="photo--responsive"><img src="img/bootflat-ui-kit.jpg" /></div>
-        </div>
+
+      <div class="blog-index">  
+       {% assign post = site.posts.first %}
+       {% assign content = post.content %}
+       {% include post_detail.html %}
+      </div>
       </div>
       <!--footer-->
       <div class="site-footer">
         <div class="container">
-          <div class="download">
-            <span class="download__infos">You simply have to <b>try it</b>.</span>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="btn btn-primary" href="https://github.com/bootflat/bootflat.github.io/archive/master.zip">Download Bootflat</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="btn" href="documentation.html">Read the Documentation</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <!-- SmartAddon BEGIN -->
-            <script type="text/javascript">
-            (function() {
-            var s=document.createElement('script');s.type='text/javascript';s.async = true;
-            s.src='http://s1'+'.smartaddon.com/share_addon.js';
-            var j =document.getElementsByTagName('script')[0];j.parentNode.insertBefore(s,j);
-            })();
-            </script>
-
-            <a href="http://www.smartaddon.com/?share" title="Share Button" onclick="return sa_tellafriend('','bookmarks')"><img alt="Share" src="http://bootflat.github.io/img/share.gif" border="0" /></a>
-            <!-- SmartAddon END -->
-          </div>
           <hr class="dashed" />
           <div class="row">
             <div class="col-md-4">
-              <h3>Get involved</h3>
-              <p>Bootflat is hosted on <a href="https://github.com/bootflat/bootflat.github.io" target="_blank" rel="external nofollow">GitHub</a> and open for everyone to contribute. Please give us some feedback and join the development!</p>
+              <h3>Use modules</h3>
+              <p>Example42 modules are free and widely reusable. Browse the Example42 <a href="https://github.com/example42" target="_blank" rel="external nofollow">GitHub</a> repositories and pick the from the Puppet <a href="https://forge.puppetlabs.com/example42" target="_blank" rel="external nofollow">Forge</a></p>
             </div>
             <div class="col-md-4">
               <h3>Contribute</h3>
-              <p>You want to help us and participate in the development or the documentation? Just fork Bootflat on <a href="https://github.com/bootflat/bootflat.github.io" target="_blank" rel="external nofollow">GitHub</a> and send us a pull request.</p>
+              <p>This is Open Source, beauty. You can fork, fix, modify and make pull requests. Use <a href="https://github.com/example42" target="_blank" rel="external nofollow">GitHub</a></p> to open bugs or submit PRs</p>
             </div>
             <div class="col-md-4">
-              <h3>Found a bug?</h3>
-              <p>Open a <a href="https://github.com/bootflat/bootflat.github.io/issues" target="_blank" rel="external nofollow">new issue</a> on GitHub. Please search for existing issues first and make sure to include all relevant information.</p>
+              <h3>Ask & Discuss</h3>
+              <p>If you have questions or what to discuss anything about Example42 modules, use the official Google Group<a href="https://groups.google.com/forum/#!forum/example42-puppet-modules" target="_blank" rel="external nofollow">Example42 Puppet Modules</a> . This is the place for questions.</p>
             </div>
           </div>
           <hr class="dashed" />
           <div class="row">
             <div class="col-md-6">
               <h3>Keep in contact</h3>
+              <ul>
+
                 <!-- Begin MailChimp Signup Form -->
                 <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
                 <div id="mc_embed_signup">
@@ -158,8 +108,8 @@
                 </form>
                 </div>
                 <!--End mc_embed_signup-->
-              <ul>
-                <li>Tweet <a href="https://twitter.com/alvagante" target="_blank">@alvagante</a>&nbsp;&nbsp;&nbsp;&nbsp;Email <span class="connect">info@lab42.it</span></li>
+                <li>Tweet <a href="https://twitter.com/alvagante" target="_blank">@alvagante</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Email <span class="connect">info@lab42.it</span></li>
                 <li>
                   <a title="Twitter" href="https://twitter.com/alvagante" target="_blank" rel="external nofollow"><i class="icon" data-icon="&#xe121"></i></a>
                   <a title="Facebook" href="https://www.facebook.com/Example42PuppetModules" target="_blank" rel="external nofollow"><i class="icon" data-icon="&#xe10b"></i></a>
@@ -177,22 +127,11 @@
           </div>
           <hr class="dashed" />
           <div class="copyright clearfix">
-            <p><b>Bootflat</b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="getting-started.html">Getting Started</a>&nbsp;&bull;&nbsp;<a href="documentation.html">Documentation</a>&nbsp;&bull;&nbsp;<a href="free-psd.html">Free PSD</a></p>
-            <p>&copy; 2014 <a href="http://www.flathemes.com" target="_blank">FLATHEMES</a>, Inc. All rights reserved. &nbsp;&nbsp;Code licensed under <a href="http://opensource.org/licenses/mit-license.html" target="_blank" rel="external nofollow">MIT License</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/" rel="external nofollow">CC BY 3.0</a>.</p>
+            <p>Site based on <a href="http://bootflat.github.io" target=_"blank">Bootflat</a> by <a href="http://www.flathemes.com" target="_blank">Flathemes</a>. Hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</p>
           </div>
         </div>
       </div>
 
     </div>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-48721682-1', 'bootflat.github.io');
-      ga('send', 'pageview');
-
-    </script>
   </body>
 </html>
