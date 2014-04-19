@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Example42 Puppet Services</title>
+    <title>Example42 Puppet Works: Modules, Training, Consulting Services</title>
     <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- SmartAddon.com Verification -->
@@ -20,41 +20,21 @@
     <script type="text/javascript" src="js/site.min.js"></script>
   </head>
   <body class="home">
+
     <div class="docs-header header--noBackground">
-      <!--nav-->
-      <nav class="navbar navbar-default navbar-custom" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"><img src="img/logo42.png" height="40"></a>
-          </div>
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a class="nav-link" href="puppet-modules.html">Modules</a></li>
-              <li><a class="nav-link" href="puppet-documentation.html">Documentation</a></li>
-              <li><a class="nav-link" href="puppet-services.html">Services</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    {% include header.html %}  
       <!--index-->
       <div class="index">
         <h1>
-          <img src="img/logo-index42.png" alt="Example42 Puppet services" align="left">
+          <img src="img/logo-index42.png" alt="Example42 Puppet Works" align="left" vspace="200px">
         </h1>
-        <h2>Example42 is about Puppet<br/>You can find here:<br/>An Open Source Set of Reusable Puppet Modules<br/>Free documentation, inspiration, explanations.<br/>Puppet Services for fun and profit</h2>
-        <p class="download-link">
-          <a class="btn btn-primary" href="https://github.com/example42">Download from GitHub</a>
-        </p>
-        <p class="version-text">Apache Licence 2.0</p>
-      </div>
-      <!--social-->
-      <ul class="social">
+        <h1>Example42 Puppet Works</h1
+        <h2>An Open Source Set of Reusable Puppet Modules<h2/>
+        <h2>Free documentation, inspiration, tutoriala<h2/>
+        <h2>Puppet Services, for fun and profit</h2>
+        <p class="download-link"><a class="btn btn-primary" href="https://forge.puppetlabs.com/example42">Download for the Forge</a></p>
+        <p class="download-link"><a class="btn btn-primary" href="https://github.com/example42">Download from GitHub</a></p>
+       <ul class="social">
         <li>
           <iframe src="http://ghbtns.com/github-btn.html?user=example42&amp;repo=puppet-modules&amp;type=watch&amp;count=true&size=large" title="Star on GitHub" frameborder="0" scrolling="0" width="150" height="25"></iframe>
         </li>
@@ -62,10 +42,12 @@
           <iframe src="http://ghbtns.com/github-btn.html?user=example42&amp;repo=puppet-modules&amp;type=fork&amp;count=true&size=large" title="Fork on GitHub" frameborder="0" scrolling="0" width="150" height="25"></iframe>
         </li>
         <li>
-           <iframe src="http://ghbtns.com/github-btn.html?user=exampl42&type=follow&count=true"
+           <iframe src="http://ghbtns.com/github-btn.html?user=example42&type=follow&count=true&size=large"
   allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe>         
         </li>
       </ul>
+        <p class="version-text">Apache Licence 2.0</p>
+      </div>
       <!--desc-->
       <div id="learn-more" class="desc container">
 
@@ -102,16 +84,16 @@
                 <!-- Begin MailChimp Signup Form -->
                 <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
                 <div id="mc_embed_signup">
-                <h3 style="margin-bottom: 15px;">Newsletter</h3>
+                <h4>Newsletter</h4>
                 <form action="http://example42.us6.list-manage.com/subscribe/post?u=17ca4725b2de64ee6f30c4e1d&amp;id=c638b498a6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <input style="margin-bottom: 10px;" type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required>
                     <span class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary"></span>
                 </form>
                 </div>
                 <!--End mc_embed_signup-->
-                <li><p>Tweet <a href="https://twitter.com/alvagante" target="_blank">@alvagante</a>&nbsp;&nbsp;&nbsp;&nbsp;</p></li>
-                <li><p>Email <span class="connect">info@lab42.it</span></p></li>
-                <li><p>Discussion Group <a href="https://groups.google.com/forum/#!forum/example42-puppet-modules" target="_blank" rel="external nofollow">Example42 Puppet Modules</a></p></li>
+                <h4>Forum</h4>
+                <p>Google group: <a href="https://groups.google.com/forum/#!forum/example42-puppet-modules" target="_blank" rel="external nofollow">Example42 Puppet Modules</a></p>
+                <ul>
                 <li>
                   <a title="Twitter" href="https://twitter.com/alvagante" target="_blank" rel="external nofollow"><i class="icon" data-icon="&#xe121"></i></a>
                   <a title="Facebook" href="https://www.facebook.com/Example42PuppetModules" target="_blank" rel="external nofollow"><i class="icon" data-icon="&#xe10b"></i></a>
@@ -135,5 +117,6 @@
       </div>
 
     </div>
+  {% include footer.html %}  
   </body>
 </html>
