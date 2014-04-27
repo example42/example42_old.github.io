@@ -1,0 +1,56 @@
+<!-- Navbar  ================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/README.html"><i style="float:right;" class="icon-info-sign" alt="info"></i></span></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          {% if page.url == "/index.html" %}<li class="active">{% else %}<li>{% endif %}
+          <a href="/index.html">Home</a></li>
+
+          {% if page.url == "/vita.html" %}<li class="active">{% else %}<li>{% endif %}
+          <a href="/vita.html">Vita</a></li>
+
+          {% if page.url == "/research.html" %}<li class="active">{% else %}<li>{% endif %}
+          <a href="/research.html">Research</a></li>
+
+          {% if page.url == "/teaching.html" %}<li class="active">{% else %}<li>{% endif %}
+          <a href="/teaching.html">Teaching</a></li>
+
+          {% if page.url == "/community.html" %}<li class="active">{% else %}<li>{% endif %}
+          <a href="/community.html">Community</a></li>
+
+          {% if page.url == "/lab-notebook.html" %}<li class="active">{% else %}<li>{% endif %}
+          <a href="/lab-notebook.html">Lab Notebook</a></li>
+
+        </ul>
+      </div><!--/.nav-collapse -->
+
+      <!-- Search site using Google's index -->
+      <form class="navbar-search pull-right" method="get" action="http://google.com/search">
+        <p>
+          <input type="hidden" name="q" value="site:carlboettiger.info" />
+          <input type="text" class="search-query" name="q" />
+          <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+        </p>
+      </form>
+      <!--
+      <div id="search">
+      <form method="get" class="navbar-search pull-right form-search">
+        <p>
+        <input type="text" name="search-text" id="search-text">
+         <button class="btn btn-mini" type="submit"><i class="icon-search"></i></button> 
+        </p>
+      </form>
+      </div>
+      -->
+     </div> <!-- /container -->
+   </div> <!-- /navbar-inner -->
+ </div> <!-- /navbar -->
+
+

@@ -10,9 +10,9 @@ pygments:         true
 permalink:        pretty
 
 # Server
-source:           docs
-url:              http://example42.github.io
-encoding:         UTF-8
+# source:           /
+#url:              http://example42.github.io
+#encoding:         UTF-8
 
 # Custom vars
 current_version:  2.0.1
