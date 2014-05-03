@@ -1,6 +1,6 @@
 # Meta data
 name:             Example42
-authors:          flathemes
+authors:          example42
 description:      Example42 Puppet Services. Training, moduls development, infrastructures migration, architecture design.
 
 # Dependencies

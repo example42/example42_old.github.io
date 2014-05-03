@@ -5,18 +5,23 @@ subtitle: An Open Source Set of Reusable Puppet Modules
 
 ---
 
-      <div class="index">
-        <div class="col-md-6">
-          <img src="img/logo-index42.png" alt="Example42 Puppet Works">
-        </div>
-        <div class="col-md-6">
-        <h1>Example42</br>Puppet Works</h1>
-        <h2>Puppet Modules for free</h2>
-        <h2>Puppet Tutorials for free</h2>
-        <h2>Puppet Services for fun and profit</h2>
-        <p class="download-link"><a class="btn btn-primary" href="https://forge.puppetlabs.com/example42">Download from the Forge</a></p>
-        <p class="download-link"><a class="btn btn-primary" href="https://github.com/example42">Download from GitHub</a></p>
-        <p class="version-text">All Example42 works are released under the Apache Licence 2.0</p>
+      <div class="row">
+        <div class="col-md-12">
+         {% include jumbotron.html %}
         </div>
       </div>
-      {% include post_summary.html %}
+
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Latest Blog posts</h4>
+          {% include post_summary.html %}
+        </div>
+        <div class="col-md-4">
+          <h4>GitHub Activity</h4>
+          {% include github_activity.html %}
+        </div>
+        <div class="col-md-4">
+          <h4>Twitter Activity</h4>
+          {% include twitter_activity.html %}
+        </div>
+      </div>
