@@ -1,7 +1,6 @@
 ---
-layout: default
-title: !binary |-
-  VGVzdCBEcml2ZW4gUHVwcGV0IGluZnJhc3RydWN0dXJlcyBkZXBsb3ltZW50
+layout: blog
+title: Test driven Puppet infrastructure deployment
 created: 1298925679
 ---
 <p>A server infrastructure can't be considered fully operative if it's not monitored in some way. <br />Various tools are available in the market and they cover different facets of the common monitoring needs (alerting, trending, performance, security...) but whatever&#160; is your choice you need to configure them in some way.</p><p>One of the nice side effects of having modules that include automatic monitoring functions, such as the Example42 ones, is that while deploying a Puppet infrastructure you add the relevant checks to your monitoring software so that you can quickly understand what is working out of the box and what has to be fixed.</p><p>All the Example42 Puppet modules provide built in monitoring features, you can activate them just by setting the <strong>$monitor</strong> variable to "<strong>yes</strong>" (whatever the method you use to define and classify nodes) and at least one <strong>$monitor_tool</strong>.</p><p>An unique feature of the Example42 modules is the <strong>abstraction</strong> that is embedded in all the modules, so that it's quite easy and quick to introduce new monitoring tools without having to modify anything in the modules.</p><p>Typically a module has 2 kind of checks enabled by default: its listening port, if it is a network service, and its process name, for example, in the samba module you have:</p><pre>    monitor::port { "samba_${samba::params::protocol}_${samba::params::port}": 

@@ -1,7 +1,6 @@
 ---
-layout: default
-title: !binary |-
-  TmV4dEdlbiBNb2R1bGVzOiBEb2N1bWVudGF0aW9uIGFuZCBFeGFtcGxlcw==
+layout: blog
+title: NextGen modules documentation and examples
 created: 1334070927
 ---
 <p>Since the <a href="http://www.example42.com/?q=NextGen">first post</a> about the NextGen modules some improvements have been done and some design choices have been done (the most important one is the <b>params_lookup</b> pattern which is the result of some good feedback and makes it possible to automatically retrieve class' arguments from top scope variables, an ENC and / or  Hiera).</p>

@@ -1,7 +1,6 @@
 ---
-layout: default
-title: !binary |-
-  UHVwcGV0IE1vZHVsZXMgZm9yIEZ1biAmIFByb2ZpdA==
+layout: blog
+title: Presentation Puppet Conf 2012 - Puppet modules for fun and profit
 created: 1348986550
 ---
 <p>Another presentation on the design choices behind the NextGen Example42 Puppet modules.<br />Held at PuppetConf 2012 in San Francisco (what a great conference! :-)</p>

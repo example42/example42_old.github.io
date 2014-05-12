@@ -1,10 +1,9 @@
 ---
-layout: default
-title: !binary |-
-  SG93IHRvIFNldHVwIGEgUHVwcGV0TWFzdGVyIHdpdGggRXhhbXBsZTQyIG1v
-  ZHVsZXM=
+layout: blog
+title: How to setup a Puppet Master with example42 modules
 created: 1293993629
 ---
+
 <p><strong>NOTE May 2012</strong>. The documentation below refers to old versions of the Example42 Puppet Modules and sample Infrastructures.&#160;You can still use them but be sure to git clone the correct branch versions (1.0 and 2011 respectively).</p><p>The setup of Puppet for a beginner is not always easy. You have to install and configure the PuppetMaster and the Puppet clients, exchange and sign their certificates and then start to write Puppet code in order to see something interesting happening.</p><p>To install the Puppet Master is not difficult but you need some tweaks in order to activate specific features and functionalities. With the Example 42 puppet module you can easily setup a PuppetMaster with the following features: <br />
             - Integration with the web frontends <strong>Dashboard </strong>or the <strong>Foreman </strong>with or without external nodes.<br />
             - Support for <strong>0.25</strong> and <strong>2.6</strong> versions<br />- Support for <strong>storeconfigs </strong>(full and thin)<br />

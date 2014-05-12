@@ -4,7 +4,7 @@ authors:          example42
 description:      Example42 Puppet Services. Training, moduls development, infrastructures migration, architecture design.
 
 # Dependencies
-pygments:         true
+highlighter:         rouge
 
 # Permalinks
 permalink:        pretty
@@ -19,3 +19,6 @@ current_version:  2.0.1
 repo:             https://github.com/bootflat/bootflat.github.io
 
 markdown: kramdown
+
+gems:
+  - jekyll-redirect-from

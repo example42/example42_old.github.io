@@ -1,8 +1,6 @@
 ---
-layout: default
-title: !binary |-
-  QSBwcmVzZW50YXRpb24gYWJvdXQgRXhhbXBsZTQyIE5leHQgR2VuIE1vZHVs
-  ZXM=
+layout: blog
+title: A presentation about Example42 NextGen modules
 created: 1341999897
 ---
 <p>PuppetCamps are always a great occasion to meet good friends and talk about Puppet with people and, when possible, talk about the work you&#39;re doing with it.</p><p>I&#39;ve had the chance to make a presentation about the NextGen modules at the Dublin and Geneva PuppetCamps.<br />Slides, are similar (Geneva ones have just some cosmetic additions) and are both available on <a href="http://www.slideshare.net/Alvagante" title="SlideShare">SlideShare</a></p>

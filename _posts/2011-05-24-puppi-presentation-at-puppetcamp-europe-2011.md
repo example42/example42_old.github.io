@@ -1,7 +1,6 @@
 ---
-layout: default
-title: !binary |-
-  UHVwcGkgcHJlc2VudGF0aW9uIGF0IFB1cHBldENhbXAgRXVyb3BlIDIwMTE=
+layout: blog
+title: Puppi presentation at Puppet Camp Europe 2011
 created: 1306271425
 ---
 Puppi has been presented at the PuppetCamp Europe 2011.<br/>

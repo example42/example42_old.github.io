@@ -1,8 +1,6 @@
 ---
-layout: default
-title: !binary |-
-  UHVwcGk6IEEgUHVwcGV0IG1vZHVsZSBmb3IgRGVwbG95bWVudCBBdXRvbWF0
-  aW9uIA==
+layout: blog
+title: Puppi a Puppet module for deployment automation
 created: 1298454906
 ---
 <p>Puppi is a Puppet module that lets users manage and automate the deployment of applications or generally every kind of batch activity that involves the execution of a sequence of scripts and commands.<br />Its structure provides <strong>complete flexibility</strong> on the actions required for virtually any kind of application deployment but, in order to make usable out of the box, some example defines and scripts are provided to manage common scenarios and needs.<br />The module provides:<br />- The <strong>puppi command </strong>and its whole working environment<br />- A set of <strong>common usage scripts </strong>that can be used in chain <br />- <strong>Sample defines </strong>that can be used for many common application deployment scenarios.</p><h2>The whole picture in an example</h2><p>Before diving into details let's see a brief example.<br />On your node or role you can use a similar define:</p><pre>puppi::project::war { "myapp":
