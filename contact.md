@@ -26,3 +26,4 @@ They are happy for two reasons:
 
 If you think you need this kind of services, please tell us something more.
 
+{% include contact.html %}
