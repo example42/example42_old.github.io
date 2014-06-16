@@ -16,6 +16,7 @@ I'd dare to say that I would not write almost any of the 91 modules published on
 Something has to change. This post, divided in two parts, is about how Puppet modules might change. At least **my** Puppet modules.
 
 On this first part I'm going to express my opinion on some points:
+
 - What are the reusability features a module should have
 - The distintion between application modules and higher abstraction modules
 - What are the challenges and reusability options for higher abstraction modules
@@ -51,16 +52,18 @@ Also, in many cases, the module's classes expose parameters that allow the confi
 
 The kind and amount of such custom parameters may vary, a lot.
 
-My current opinion is that besides, eventually, some very core, useful and basic parameter for specific applications (For example: ```syslog_server``` , ```dns_servers```) it should be enough to expose a single, open, parameter where users can provide an hash with any specific configuration setting the application may have. Such an hash should be used with a proper template to manage any kind of configuration.
+My current opinion is that besides, eventually, some very core, useful and basic parameter for specific applications (For example: ```syslog_server``` , ```dns_servers```) it should be enough to expose a single parameter where users can provide an hash with any specific configuration setting the application may have. Such an hash should be used with a proper template to manage any kind of configuration.
+
+The benefit is clear, we preserve the possibility to manage our infrastructure via bare data, without the need to add and update the module's classes with application specific parameters.
 
 
 ### Higher abstraction modules
 
 Application modules (also called "component" modules) should follow a Single Responsibility Principle, dealing only with resources directly related to the managed application.
 
-Still in our infrastructures we have many applications that interoperate and have to be configured to reflect a consistent setup which involve different configurations for different applications to be assembled together. 
+Still in our infrastructures we have many applications that interoperate and have to be configured to reflect a consistent setup which involves different configurations for different applications to be assembled together. 
 
-The Roles and Profiles patterns is an example of how we can work at an higher abstraction layer, using different component modules to setup whole stacks of applications which may run on separated systems.
+The Roles and Profiles pattern is an example of how we can work at an higher abstraction layer, using different component modules to setup whole stacks of applications which may run on separated systems.
 
 I think that application modules should not be opinionated, at least in their default functionalities.
 They should provide resources to manage different configuration needs, without enforcing any specific implementation. An application module should be considered as a library, an interface to the configuration of the underlying application. Something that does just a specific thing and it does it well, in a predictable way.
@@ -89,10 +92,12 @@ Let's see an example of an higher abstraction module.
 A Wordpress module is a (apparently simple) case. It's the typical borderline case, as it should just install WordPress, but in order to provide a working setup we have to configure the component modules of Apache, Php and Mysql in a very precise way managing Mysql grants, Apache virtualhosts and Php settings.
 
 Here, we should actually have two different modules:
+
 - The component module, that just installs and configures WordPress
 - The Higher abstration module, that manages the whole infratructure needed to provide a WordPress site.
 
-Let's concentrate on the latter. Such a module, or class, might expose parameters that allow to set high level settings (virtualhost names, database credentials...) but it has to be opinionated on the setup, from the same core choice on the web server and database backend to use.
+Let's concentrate on the latter. Such a module, or class, might expose parameters that allow to set high level settings (virtualhost names, database credentials...) but it has to be opinionated on the setup, from the same core choice on the web server and database backend to use, to content of the actual configuration files delivered.
+
 To offer better reusability options, it might expose parameters to manage which component to use, for example allowing users the option to use Nginx and PostgreSQL, instead of Apache and MySQL. It also could allow the possibility to compose the deployment of its various components on different, separated, servers and eventually add features to manage reverse proxies, load balancers or caching servers. 
 
 All such reusability options definitively augment the complexity of the module to a point that we might question if it's worth the effort.
@@ -102,20 +107,22 @@ Still at least some composition options are just needed, an example of a wordpre
 I hope to see sooner or later some examples of reusable profiles. To test and validate the idea (reusability, composition on multiple servers) I've make this, essential, [logstash stack](https://github.com/example42/puppet-stack/blob/master/manifests/logstash.pp) which is actually in production on at least a site.
 
 Besides the specific implementation, I think that a reusable Higher Abstraction module should provide:
+
 - Support for different Operating Systems, where possible
 - By default a working setup, based on opinionated choices about what components to use and how to configure them
-- Support for alternate templates. For each managed application for which a template is provided, user should b able to provie their own alternative one
+- Support for alternate templates. For each application for which a template is provided, user should b able to provie their own alternative one
 - Parameters that allow configuration of high level settings
 - Optional support for monitoring and firewalling classes, with the possibility for users to override the default classes for these tasks, if present
 - Optional support for different components (for example: different web servers, database backends and so on)
-- Compositioning options, that allow users to install the needed components on different nodes adapting to differnt infrastructures.
+- Compositioning options, that allow users to install the needed components on different nodes adapting to different infrastructures.
 
 The last point is particularly important as is the key for real reusability and, at the same time, introduces new challenges that raise the complexity of the module and opens new questions on the module's usage patterns.
 
-I think that what is still missing, in the current ecosystem, are two fundamental points:
+I think that what is still missing, in the current Puppet modules' ecosystem, are two fundamental points:
+
 - Patterns to extend reusability of higher abstraction layer modules (as decribed here)
 - Standardization in the component application modules
 
-I suppose and hope we will see proposals and suggestions on how reusabilty patterns will be extended to higher abstraction modules, maybe claryfing the naming (here sometimes I talked about "reusable profiles", even if profiles, as originally described in Dunn's post, are not so similar to the reusable abstraction modules discussed here).
+I suppose and hope we will see proposals and suggestions on how reusabilty patterns will be extended to higher abstraction modules, maybe claryfing the naming (here sometimes I talked about "reusable profiles", even if profiles, as originally described in Craig Dunn's post, are not so similar to the reusable abstraction modules discussed here).
 
-As for the second point, a possible approach on how to face the standardization of the component modules, or even rethink the whole concpt of component module, is going to be presented in the second part of this post. 
+As for the second point, a possible approach on how to face the standardization of the component modules, or even rethink the whole concept of component modules, is going to be presented in the second part of this post. 
