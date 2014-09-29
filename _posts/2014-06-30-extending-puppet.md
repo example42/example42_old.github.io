@@ -44,7 +44,6 @@ Five winners will be selected and contacted by Packt to get a free e-copy of the
 In any case whoever can get a free sample chapter from [http://bit.ly/1qbxWZy](http://bit.ly/1qbxWZy) in order to have an idea of what you can expect from these pages.
 
 
-
 I feel definitively relieved at the idea that my weekends are finally free from some writing duties and I must say that I'm satisfied by the work done.
 
 I know that this is not the best written Puppet book around, my English writing skills are not up to a professional publication, but I think there's much content in those pages, a lot of useful information also for experienced Puppet users.
