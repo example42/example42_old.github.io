@@ -160,7 +160,7 @@ The second one is the ability to adapt the module to custom needs.
 
 Often, authors, place resources that refer to some external application, in a dedicated subclass.
 
-For example wordpress::apache might be used to configure apache as frontend, alternative to a wordpress::nginx or whatever. In these cases it's generally available a parameter that allows the choice of the webserver to use.
+For example ```wordpress::apache``` might be used to configure apache as frontend, alternative to a ```wordpress::nginx``` or whatever. In these cases it's generally available a parameter that allows the choice of the webserver to use.
 
 That's fine but I'd go further. For every subclass of a module, that groups resources somehow related to other modules, there should be a parameter that allows users to provide a custom version of that class.
 
@@ -185,6 +185,7 @@ Small note with Puppet 4 the above code would not work as expected if we set an 
     }
 
 If our users want to use a different implementation of Apache (they may use a different, not compatible, module) or a different webserver, they can simply provide the name of the class to use with data like:
+
     ---
       wordpress::webserver_class: '::site::wordpress::apache'
 
@@ -192,7 +193,7 @@ and define this class in the own site module, so have the file ```$MODULEPATH/si
 
     class ::site::wordpress::apache {
       # Anything needed to configure Apache as desired  
-   }
+    }
 
 This approach can be followed for other cases, ror example, if we need to configure additional repositories to manage the installation of packages, we can con confine them in a dedicated class, or if we want to provide automatic firewalling or monitoring features with the module, we might place them in dedicated classes that allow our users to manage these features within their infrastructure.
 
