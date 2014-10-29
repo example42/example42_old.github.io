@@ -18,7 +18,7 @@ They are not rocket science, just common sense and more or less established patt
 
 #### Expose a parameter to change the used templates. Always.
 
-Wherever we use an erb template in our module to populate the content of a managed file, we should add a parameter that allows our users to provide a custom one: their own template.
+Wherever we use an erb template in our module to populate the content of a managed file, we should add a parameter that allows our users to provide their own custom template.
 
 The reason is simple, in most of the cases we simply can't provide a fitting template for the configuration needs of everyone.
 
@@ -86,7 +86,7 @@ A sample fragment of the file ```$MODULEPATH/site/templates/redis/redis.conf.erb
     slaveof <%= @options_hash['masterip'] %> <%= @options_hash['masterport'] %>
     <% end -%>
 
-Users can actually provide any kind of data in such an hash, and use it in their templates as preferred. They can use it for application's configuration options, to manage triggers  with booleans or to pursue any other purpose that fits their needs.
+Users can actually provide any kind of data in such an hash, and use it in their templates as preferred. They can use it for application's configuration options, to manage triggers with booleans or to pursue any other purpose that fits their needs.
 
 Is such a generic hash a catch all solution that might replace all or most parameters used only to populate the contents of our templates?
 
@@ -123,7 +123,7 @@ We can, for example, set default values in this way:
 
 Now we can provide in our module a default configuration template that is highly customisable via the ```$options_hash``` parameter, with the extra benefit of providing good sample reference for users' custom templates.
 
-Our module's ```$MODULEPATH/redis/templates/redis.conf.erb``` should, obviously, use the computed ```$options``` variable which is the result of the merding of users' data with our defaults:
+Our module's ```$MODULEPATH/redis/templates/redis.conf.erb``` should, obviously, use the computed ```$options``` variable which is the result of the merging of users' data with our defaults:
 
     port <%= @options['port'] %>
     bind <%= @options['bind'] %>
@@ -189,13 +189,13 @@ If our users want to use a different implementation of Apache (they may use a di
     ---
       wordpress::webserver_class: '::site::wordpress::apache'
 
-and define this class in the own site module, so have the file ```$MODULEPATH/site/manifests/wordpress/apache.pp``` with a contnt like:
+and define this class in the own site module, so have the file ```$MODULEPATH/site/manifests/wordpress/apache.pp``` with a content like:
 
     class ::site::wordpress::apache {
       # Anything needed to configure Apache as desired  
     }
 
-This approach can be followed for other cases, ror example, if we need to configure additional repositories to manage the installation of packages, we can con confine them in a dedicated class, or if we want to provide automatic firewalling or monitoring features with the module, we might place them in dedicated classes that allow our users to manage these features within their infrastructure.
+This approach can be followed for other cases, for example, if we need to configure additional repositories to manage the installation of packages, we can con confine them in a dedicated class, or if we want to provide automatic firewalling or monitoring features with the module, we might place them in dedicated classes that allow our users to manage these features within their infrastructure.
 
 I bet you have not read anything really new to you in this post, still there a lot of modules from expert authors that don't follow these simple patterns which are not expensive and intrusive (excluding the third point, which is somehow more opinionated an questionable).
 
