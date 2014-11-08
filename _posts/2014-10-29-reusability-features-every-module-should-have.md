@@ -33,7 +33,7 @@ We can expose in the class or the define that contains this file declaration a p
 For the above example, a quick, safe, and backwards compatible fix is as easy as:
 
     class redis (
-      $config_file_template => 'redis/redis.conf.erb',
+      $config_file_template = 'redis/redis.conf.erb',
     ) {
 
       file { '/etc/redis/redis.conf':
@@ -55,8 +55,8 @@ Such a parameter is generally paired with the template one we have just seen.
 Let's just add it to our class:
 
     class redis (
-      $config_file_template => 'redis/redis.conf.erb',
-      $options_hash          => { },
+      $config_file_template = 'redis/redis.conf.erb',
+      $options_hash         = { },
     ) {
 
       file { '/etc/redis/redis.conf':
@@ -104,8 +104,8 @@ Actually what's empty can be filled with default values, exactly like the defaul
 We can, for example, set default values in this way:
 
     class redis (
-      $config_file_template => 'redis/redis.conf.erb',
-      $options_hash          => { },
+      $config_file_template = 'redis/redis.conf.erb',
+      $options_hash         = { },
     ) {
 
     # Default configuration values  
