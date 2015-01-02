@@ -3,7 +3,7 @@ layout: blog
 title: Introducing Tiny Puppet
 ---
 
-Tiny Puppet is a single Puppet module that can replace virtually any other single application module.
+[Tiny Puppet](https://github.com/example42/puppet-tp) is a single Puppet module that can replace virtually any other single application module.
 
 Consider it as another Puppet abstraction layer, where we abstract the interface to the management of whole applications.
 
